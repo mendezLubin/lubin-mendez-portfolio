@@ -8,3 +8,64 @@ body {
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
 }
+
+/* ----------- MENU ---------- */
+.navbar {
+    background-color: rgb(43, 42, 42);
+    padding: 0 20px;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nameMenuLink {
+  text-decoration: none;
+}
+
+.hamburguer-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburguer-button svg {
+  width: 40px;
+  fill: white; 
+}
+
+/* Hide by default in mobile first */
+.nav-links {
+  display: none;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Gradient for text */
+.gradient {
+    background-image: linear-gradient(to bottom right, #964ae2,#4A90E2 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Optional, but better to have */
+  background-clip: text;
+  color: transparent;
+}
+
+/* From 768px and up: show full menu and hide hamburger button */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .hamburguer-button {
+    display: none;
+  }
+
+}
