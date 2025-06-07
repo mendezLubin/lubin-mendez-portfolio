@@ -4,23 +4,49 @@
     margin: 0;
 }
 
+html {
+  font-size: 16px; /* 1rem = 16px */
+}
+
 body {
     background-color: rgb(0, 0, 0);
+
+    /* This is the base font for the entire website, unless is specified in a specific section: */
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
     color: rgb(255, 255, 255);
+}
+
+:root {
+  --color1: #3b78bd;
+  --color2: #964ae2;
+}
+
+/* All links in white color, unless is specified */
+a {
+  color: white;
 }
 
 /* ----------- MENU ---------- */
 .navbar {
     background-color: rgb(43, 42, 42);
     padding: 0 20px;
-    height: 8vh;
+    height: 9vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+  border-bottom: 4px solid var(--color1);  /* Color del subrayado al pasar el cursor */
 }
 
 .nameMenuLink {
   text-decoration: none;
+  font-weight: 800;
+  font-size: 1.8rem;
 }
 
 .hamburguer-button {
@@ -42,12 +68,11 @@ body {
 
 .nav-links li a {
   text-decoration: none;
-  color: white;
 }
 
 /* Gradient for text */
 .gradient {
-    background-image: linear-gradient(to bottom right, #964ae2,#4A90E2 );
+    background-image: linear-gradient(to bottom right, var(--color1), var(--color2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
