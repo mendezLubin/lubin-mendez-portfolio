@@ -8,6 +8,12 @@ html {
   font-size: 16px; /* 1rem = 16px */
 }
 
+:root {
+  --color1: #3b78bd;
+  --color2: #964ae2;
+  --colorWhite: #ffffff;
+}
+
 body {
     background-color: rgb(0, 0, 0);
 
@@ -15,13 +21,10 @@ body {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 1.4rem;
-    color: rgb(255, 255, 255);
+    color: var(--colorWhite);
 }
 
-:root {
-  --color1: #3b78bd;
-  --color2: #964ae2;
-}
+
 
 /* All links in white color, unless is specified */
 a {
@@ -81,6 +84,81 @@ a {
   color: transparent;
 }
 
+/* Home section */
+
+svg {
+  width: 50px;
+}
+
+#home {
+  padding: 20px 15px 0 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr; */
+}
+
+.homeMessage {
+  font-size: 2rem;
+  font-weight: 600;
+} 
+
+.btnResume {
+  background-color: var(--color1);
+  color: var(--colorWhite);
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.myPhotoHome {
+  width: 250px;
+}
+
+/* Grid layout: */
+
+.homeMessageArea {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.homeResumeBtnArea {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.homeContactIconsArea {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  display: flex;
+  flex-direction: column;
+}
+
+.homeMyPhotoArea {
+  grid-column: 2 / 3;
+  grid-row: 2 / 4;
+}
+
+/* PROJECTS SECTION */
+.projectsSimulation {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 10px;
+}
+
+/* SKILLS SECTION */
+.skillsIcons {
+  width: 50px;
+}
+
+/* FOOTER */
+
+footer {
+  height: 9vh;
+}
+
 /* From 768px and up: show full menu and hide hamburger button */
 @media (min-width: 768px) {
   .nav-links {
@@ -91,6 +169,29 @@ a {
 
   .hamburguer-button {
     display: none;
+  }
+
+/* From 768px and up: different layour for home section */
+
+  .homeMessageArea {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  }
+
+  .homeMyPhotoArea {
+  grid-column: 2 / 3;
+  grid-row: 1 / 4;
+  }
+
+  .homeResumeBtnArea {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  }
+
+  .homeContactIconsArea {
+  flex-direction: row;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
   }
 
 }

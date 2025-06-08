@@ -41,35 +41,125 @@
   </header>
 
   <main>
-
+    <!-- HOME -->
     <section id="home" aria-label="Home section">
-        <!-- Home content -->
-    </section>
 
+      <div class="homeMessageArea">
+        <h1 class="homeMessage">Hi,<br> I am Lubin <span class="gradient">Mendez</span><br> frontend Developer</h1>
+      </div>
+
+      <div class="homeResumeBtnArea">
+        <button class="btnResume">Resume</button>
+      </div>
+
+      <div class="homeContactIconsArea">
+        <div>
+          <svg role="img" viewBox="0 0 24 24"><title>GitHub icon</title><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </div>
+
+        <div>
+          <svg role="img" viewBox="0 0 24 24"><title>LinkedIn icon</title><path fill="currentColor" d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91z"/></svg>
+        </div>
+
+        <div>
+          <svg role="img" viewBox="0 0 24 24"><title>Yahoo Mail icon</title><path fill="currentColor" d="M10.5 7.59L8.16 13.2L5.85 7.59H2l4.29 9.64l-1.54 3.47H8.5l5.74-13.11zm4.5 5.14c-1.37 0-2.41 1.04-2.41 2.27c0 1.17 1 2.16 2.34 2.16c1.39 0 2.43-1.03 2.43-2.26c0-1.21-1-2.17-2.36-2.17m2.72-9.43l-3.83 8.59h4.28L22 3.3z"/></svg>
+        </div>
+
+      </div>
+
+      <div class="homeMyPhotoArea">
+        <img class="myPhotoHome" src="./assets/images/photoSimulation.jpg" alt="">
+      </div>
+
+    </section>
+    
+    <!-- ABOUT -->
     <section id="about" aria-label="About me section">
-        <!-- About content -->
+
+      <h2>About me</h2>
+
+      <div class="aboutMeMyPhotoArea">
+        <img class="myPhotoHome" src="./assets/images/photoSimulation.jpg" alt="">
+      </div>
+
+      <div class="aboutMeMessage">
+        <h2>I am Lubin <span class="gradient">Mendez</span></h2>
+
+        <p>Programming is my passion and my discipline. I really enjoy solving problems and believe that teamwork is essential to achieving greater results.
+
+        I hold a Bachelor’s Degree in Multimedia Engineering, where I developed strong programming foundations, and I have further specialized in Front End Development through certificates and additional courses. My background in other areas gives me additional strengths that I can apply directly to my work as a developer. 
+
+        My commitment to myself is to always continue learning through self study, online resources, and hands on projects.</p>
+      </div>
+
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects" aria-label="Projects section">
-        <!-- Projects content -->
+
+      <h2>Projects</h2>
+
+      <div>
+        <div class="projectsSimulation"></div>
+        <div class="projectsSimulation"></div>
+        <div class="projectsSimulation"></div>
+      </div>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills" aria-label="Skills section">
-        <!-- Skills content -->
+
+      <h2>Skills</h2>
+
+      <img class="skillsIcons" src="./assets/icons/html5-icon.svg" alt="HTML5 icon">
+      <img  class="skillsIcons" src="./assets/icons/css3-icon.svg" alt="CSS3 icon">
+      <img class="skillsIcons" src="./assets/icons/js-icon.svg" alt="JavaScript icon">
+      <img class="skillsIcons" src="./assets/icons/react-icon.svg" alt="React icon">
+      <img class="skillsIcons" src="./assets/icons/npm-icon.svg" alt="NPM icon">
+      <img class="skillsIcons" src="./assets/icons/vitejs-icon.svg" alt="Vite icon">
+      <img class="skillsIcons" src="./assets/icons/git-icon.svg" alt="Git icon">
+      <!-- This next icon is embedded as an SVG, not an image, so it changes color in Dark and Light Mode using fill: currentColor when the color property changes, just like the GitHub, LinkedIn, and Yahoo icons. -->
+      <svg class="skillsIcons" role="img" viewBox="0 0 24 24"><title>GitHub icon</title><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      <img class="skillsIcons" src="./assets/icons/figma-icon.svg" alt="Figma icon">
+
+      <h3>Additional skills</h3>
+
+      <p>Photography</p>
+      <p>Video</p>
+      <img class="skillsIcons" src="./assets/icons/photoshop-icon.svg" alt="Adobe Photoshop icon">
+      <img class="skillsIcons" src="./assets/icons/illustrator-icon.svg" alt="Adobe Illustrator icon">
+      <img class="skillsIcons" src="./assets/icons/premiere-icon.svg" alt="Adobe Premiere icon">
+        
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" aria-label="Contact section">
-        <!-- Contact content -->
+
+      <h2>Contact</h2>
+
+      <div>
+        <svg role="img" viewBox="0 0 24 24"><title>GitHub icon</title><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </div>
+
+      <div>
+        <svg role="img" viewBox="0 0 24 24"><title>LinkedIn icon</title><path fill="currentColor" d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91z"/></svg>
+      </div>
+
+      <div>
+        <svg role="img" viewBox="0 0 24 24"><title>Yahoo Mail icon</title><path fill="currentColor" d="M10.5 7.59L8.16 13.2L5.85 7.59H2l4.29 9.64l-1.54 3.47H8.5l5.74-13.11zm4.5 5.14c-1.37 0-2.41 1.04-2.41 2.27c0 1.17 1 2.16 2.34 2.16c1.39 0 2.43-1.03 2.43-2.26c0-1.21-1-2.17-2.36-2.17m2.72-9.43l-3.83 8.59h4.28L22 3.3z"/></svg>
+      </div>
+ 
     </section>
 
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <!-- Footer -->
+    <p>© 2025 Juan Pérez — Front End Developer</p>
+    <p>Created and developed by me.</p>
   </footer>
 
-
-
+  
     <script src="./js/code.js"></script>
 </body>
 </html>
