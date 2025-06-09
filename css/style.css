@@ -157,6 +157,60 @@ svg {
   width: 50px;
 }
 
+/* FORM */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;   /* Add side spacing to prevent form from touching page edges: */
+  margin: 0 auto;   /* To center: */
+  max-width: 600px; /* To limit the size:*/
+  gap: 1rem; /* Space between form elements */;
+}
+
+.contactForm label {
+  font-weight: 600;
+/* Label text color is inherited from the body */
+}
+.btnSubmit {
+  color: var(--colorWhite);
+}
+
+.contactForm input,
+.contactForm textarea {
+  color: var(--colorWhite);
+  background-color: var(--colorBlack); /* Background color for inputs */
+  border: 1px solid var(--colorGray); /* Border has the same thickness as in the focus state, but with a different color to keep consistency */
+  border-radius: 10px; /* Rounded corners for inputs */
+  padding: 1rem; /* Padding inside the input */
+  gap: 1rem; /* Space between inputs */
+  border: 1px solid var(--colorWhite);/* In light mode it is more clear the difference of the border*/
+  font-family: inherit; 
+  /* The writen text will be in the same font as the rest of the page */
+  font-size: 1rem;/* Size for the writen text when the user inputs something in the form */
+  /* No need to set width: 100% here because the container uses display: flex, and the inputs automatically expand to the available width. */
+}
+
+.contactForm .btnSubmit {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.contactForm button:hover,
+.homeResumeBtnArea .btnResume:hover {
+  background: linear-gradient(90deg, var(--color2), var(--color1));
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border: 1px solid var(--color1); /* Border mantains same thickness and only chages the color */
+  outline: none; /* Remove the default browser outline to avoid the focus size increase */
+}
+
 /* FOOTER */
 
 footer {
