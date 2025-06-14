@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    outline: 1px solid red;
 }
 
 html {
@@ -34,7 +35,6 @@ a {
 .navbar {
     background-color: var(--colorBlack);
     padding: 0 20px;
-    height: 9vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,6 +86,35 @@ a {
 
 .gradientBackground {
   background: linear-gradient(90deg, var(--color1), var(--color2));
+}
+
+/* === NAVBAR AND FOOTER HEIGHT === */
+.navbar {
+  height: 9vh;
+}
+
+footer {
+  height: 9vh;
+}
+
+/* === SECTION HEIGHTS === */
+
+/* Sections with reserved space for navbar (91vh) */
+#home,
+#contact {
+  height: 91vh;
+}
+
+/* Full-height sections (100vh) */
+#about,
+#projects,
+#skills {
+  height: 100vh;
+}
+
+/* === SCROLL FIX FOR #home ONLY === */
+#home {
+  scroll-margin-top: 9vh;
 }
 
 /* Home section */
@@ -145,6 +174,7 @@ svg {
 }
 
 /* PROJECTS SECTION */
+
 .projectsSimulation {
   width: 100px;
   height: 100px;
@@ -213,9 +243,8 @@ svg {
 
 /* FOOTER */
 
-footer {
-  height: 9vh;
-}
+
+
 
 /* From 768px and up: show full menu and hide hamburger button */
 @media (min-width: 768px) {
