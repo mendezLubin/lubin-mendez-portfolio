@@ -18,12 +18,12 @@ html {
 }
 
 body {
-    background-color: var(--colorBlack);
-    /* This is the base font setup for the entire website, unless it's specified in a specific section: */
-    font-family: "Inter", sans-serif; 
-    font-weight: 400;
-    font-size: 1.4rem;
-    color: var(--colorWhite);
+  background-color: var(--colorBlack);
+  /* This is the base font setup for the entire website, unless it's specified in a specific section: */
+  font-family: "Inter", sans-serif; 
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--colorWhite);
 }
 
 /* All links in white color, unless is specified */
@@ -33,12 +33,12 @@ a {
 
 /* ----------- MENU ---------- */
 .navbar {
-    background-color: var(--colorBlack);
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 600;
+  background-color: var(--colorBlack);
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
 }
 
 .nav-links a:hover {
@@ -124,9 +124,9 @@ svg {
 }
 
 #home {
-  padding: 20px 15px 0 15px;
+  padding: 20px 20px 0 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .homeMessage {
@@ -141,36 +141,43 @@ svg {
   padding: 10px 30px;
   border: none;
   border-radius: 10px;
-  margin-top: 30px;
   cursor: pointer;
 }
 
 .myPhotoHome {
-  width: 150px;
+  width: 200px;
 }
 
 /* Grid layout: */
 
 .homeMessageArea {
-  grid-column: 1 / 3;
+  grid-column: 1 / 5;
   grid-row: 1 / 2;
 }
 
 .homeResumeBtnArea {
-  grid-column: 1 / 2;
+  grid-column: 1 / 5;
   grid-row: 2 / 3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .homeContactIconsArea {
-  grid-column: 1 / 2;
+  grid-column: 1 / 3;
   grid-row: 3 / 4;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 }
 
 .homeMyPhotoArea {
-  grid-column: 2 / 3;
-  grid-row: 2 / 4;
+  grid-column: 2 / 5;
+  grid-row: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 /* PROJECTS SECTION */
