@@ -145,7 +145,7 @@ svg {
 }
 
 .myPhotoHome {
-  width: 200px;
+  width: 220px;
 }
 
 /* Grid layout: */
@@ -255,6 +255,10 @@ svg {
 
 /* From 768px and up: show full menu and hide hamburger button */
 @media (min-width: 768px) {
+  .myPhotoHome {
+  width: 400px;
+  }
+
   .nav-links {
     display: flex;
     flex-direction: row;
@@ -268,23 +272,23 @@ svg {
 /* From 768px and up: different layour for home section */
 
   .homeMessageArea {
-  grid-column: 1 / 2;
+  grid-column: 1 / 3;
   grid-row: 1 / 2;
   }
 
   .homeMyPhotoArea {
-  grid-column: 2 / 3;
+  grid-column: 3 / 5;
   grid-row: 1 / 4;
   }
 
   .homeResumeBtnArea {
-  grid-column: 1 / 2;
+  grid-column: 1 / 3;
   grid-row: 2 / 3;
   }
 
   .homeContactIconsArea {
   flex-direction: row;
-  grid-column: 1 / 2;
+  grid-column: 1 / 3;
   grid-row: 3 / 4;
   }
 
