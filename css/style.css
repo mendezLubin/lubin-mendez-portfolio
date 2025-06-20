@@ -32,7 +32,7 @@ a {
 }
 
 /* ----------- MENU ---------- */
-.navbar {
+header {
   background-color: var(--colorBlack);
   padding: 0 20px;
   display: flex;
@@ -41,11 +41,11 @@ a {
   font-weight: 600;
 }
 
-.nav-links a:hover {
+nav ul li a:hover {
   border-bottom: 2px solid var(--color1);   /* Underline color on hover */
 }
 
-.nameMenuLink {
+.site-name-link {
   text-decoration: none;
   font-weight: 800;
   font-size: 1.8rem;
@@ -63,12 +63,12 @@ a {
 }
 
 /* Hide by default in mobile first */
-.nav-links {
+nav ul {
   display: none;
   list-style: none;
 }
 
-.nav-links li a {
+nav ul li a {
   text-decoration: none;
 }
 
@@ -88,8 +88,8 @@ a {
   background: linear-gradient(90deg, var(--color1), var(--color2));
 }
 
-/* === NAVBAR AND FOOTER HEIGHT === */
-.navbar {
+/* === HEADER AND FOOTER HEIGHT === */
+header {
   height: 9vh;
 }
 
@@ -99,7 +99,7 @@ footer {
 
 /* === SECTION HEIGHTS === */
 
-/* Sections with reserved space for navbar (91vh) */
+/* Sections with reserved space for header (91vh) */
 #home,
 #contact {
   height: 91vh;
@@ -259,7 +259,7 @@ svg {
   width: 400px;
   }
 
-  .nav-links {
+  nav ul {
     display: flex;
     flex-direction: row;
     gap: 2rem;
