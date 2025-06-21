@@ -1,81 +1,55 @@
+/* =================================
+   ======== GENERAL STYLES =========
+   ================================= */
+
+/* Basic reset: */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 html {
   font-size: 16px; /* 1rem = 16px */
 }
 
+/* Variables for colors */
 :root {
-  --color1: #00c6ff;
-  --color2: #0072ff;
-  --colorWhite: #ffffff;
-  --colorBlack: #000000;
-  --colorGray: #959595;
+  --color-1: #00c6ff;
+  --color-2: #0072ff;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray: #959595;
 }
 
 body {
-  background-color: var(--colorBlack);
+  background-color: var(--color-black);
   /* This is the base font setup for the entire website, unless it's specified in a specific section: */
   font-family: "Inter", sans-serif; 
   font-weight: 400;
   font-size: 1.4rem;
-  color: var(--colorWhite);
+  color: var(--color-white);
 }
 
 /* All links in white color, unless is specified */
 a {
-  color: var(--colorWhite);
+  color: var(--color-white);
 }
 
-/* ----------- MENU ---------- */
-header {
-  background-color: var(--colorBlack);
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 600;
+/* Basic size for svg */
+svg {
+  width: 50px;
 }
 
-nav ul li a:hover {
-  border-bottom: 2px solid var(--color1);   /* Underline color on hover */
-}
-
-.site-name-link {
-  text-decoration: none;
-  font-weight: 800;
-  font-size: 1.8rem;
-}
-
-.hamburguer-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.hamburguer-button svg {
-  width: 40px;
-  fill: var(--colorWhite); 
-}
-
-/* Hide by default in mobile first */
-nav ul {
-  display: none;
+ul {
   list-style: none;
-}
-
-nav ul li a {
-  text-decoration: none;
 }
 
 /* Gradient for text */
 /* A gradient applied to text requires more code than a gradient applied to a simple background. */
-.gradientText {
-  background-image: linear-gradient(to bottom right, var(--color1), var(--color2));
+.gradient-text {
+  background-image: linear-gradient(to bottom right, var(--color-1), var(--color-2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -84,58 +58,76 @@ nav ul li a {
   color: transparent;
 }
 
-.gradientBackground {
-  background: linear-gradient(90deg, var(--color1), var(--color2));
+/* Gradient for background */
+.gradient-background {
+  background: linear-gradient(90deg, var(--color-1), var(--color-2));
 }
 
-/* === HEADER AND FOOTER HEIGHT === */
+/* =================================
+   ============ HEADER =============
+   ================================= */
+header {
+  background-color: var(--color-black);
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid var(--color-1);   /* Underline color on hover */
+}
+
+.site-name-link {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+.hamburger-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger-button svg {
+  width: 40px;
+  fill: var(--color-white); 
+}
+
+/* Hide by default in mobile first */
+nav {
+  display: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
 header {
   height: 9vh;
 }
 
-footer {
-  height: 9vh;
-}
-
-/* === SECTION HEIGHTS === */
-
-/* Sections with reserved space for header (91vh) */
-#home,
-#contact {
-  height: 91vh;
-}
-
-/* Full-height sections (100vh) */
-#about,
-#projects,
-#skills {
-  height: 100vh;
-}
-
-/* === SCROLL FIX FOR #home ONLY === */
-#home {
-  scroll-margin-top: 9vh;
-}
-
-/* Home section */
-
-svg {
-  width: 50px;
-}
+/* =================================
+   ============ HOME =============
+   ================================= */
 
 #home {
   padding: 20px 20px 0 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  height: 91vh; /* Section with reserved space for header (91vh) */
+  scroll-margin-top: 9vh; /* SCROLL FIX FOR #home ONLY */
 }
 
-.homeMessage {
+.home-message {
   font-size: 2rem;
   font-weight: 600;
 } 
 
-.btnResume {
-  color: var(--colorWhite);
+.btn-resume {
+  color: var(--color-white);
   font-size: 1.2rem;
   font-weight: 600;
   padding: 10px 30px;
@@ -144,18 +136,18 @@ svg {
   cursor: pointer;
 }
 
-.myPhotoHome {
+.home-photo {
   width: 220px;
 }
 
 /* Grid layout: */
 
-.homeMessageArea {
+.home-message-container {
   grid-column: 1 / 5;
   grid-row: 1 / 2;
 }
 
-.homeResumeBtnArea {
+.home-resume-btn-container {
   grid-column: 1 / 5;
   grid-row: 2 / 3;
   display: flex;
@@ -163,7 +155,7 @@ svg {
   align-items: center;
 }
 
-.homeContactIconsArea {
+.home-icons-container {
   grid-column: 1 / 3;
   grid-row: 3 / 4;
   display: flex;
@@ -172,7 +164,7 @@ svg {
   gap: 10px;
 }
 
-.homeMyPhotoArea {
+.home-photo-container {
   grid-column: 2 / 5;
   grid-row: 3 / 4;
   display: flex;
@@ -180,22 +172,54 @@ svg {
   justify-content: flex-end;
 }
 
-/* PROJECTS SECTION */
+/* =================================
+   ============ ABOUT =============
+   ================================= */
 
-.projectsSimulation {
+
+#about {
+  height: 100vh;
+}
+
+/* =================================
+   ============ PROJECTS ===========
+   ================================= */
+
+
+#projects {
+  height: 100vh;
+}
+
+.projects-simulation {
   width: 100px;
   height: 100px;
   background-color: red;
   margin: 10px;
 }
 
-/* SKILLS SECTION */
-.skillsIcons {
+/* =================================
+   ============ SKILLS ===========
+   ================================= */
+
+#skills {
+  height: 100vh;
+
+}
+
+.skills-icons {
   width: 50px;
 }
 
+/* =================================
+   ============ CONTACT ============
+   ================================= */
+
+#contact {
+  height: 91vh; /* Section with reserved space for header (91vh) */
+}
+
 /* FORM */
-.contactForm {
+.contact-form {
   display: flex;
   flex-direction: column;
   padding: 0 50px;   /* Add side spacing to prevent form from touching page edges: */
@@ -204,30 +228,30 @@ svg {
   gap: 1rem; /* Space between form elements */;
 }
 
-.contactForm label {
+.contact-form label {
   font-weight: 600;
 /* Label text color is inherited from the body */
 }
-.btnSubmit {
-  color: var(--colorWhite);
+.btn-submit {
+  color: var(--color-white);
 }
 
-.contactForm input,
-.contactForm textarea {
-  color: var(--colorWhite);
-  background-color: var(--colorBlack); /* Background color for inputs */
-  border: 1px solid var(--colorGray); /* Border has the same thickness as in the focus state, but with a different color to keep consistency */
+.contact-form input,
+.contact-form textarea {
+  color: var(--color-white);
+  background-color: var(--color-black); /* Background color for inputs */
+  border: 1px solid var(--color-gray); /* Border has the same thickness as in the focus state, but with a different color to keep consistency */
   border-radius: 10px; /* Rounded corners for inputs */
   padding: 1rem; /* Padding inside the input */
   gap: 1rem; /* Space between inputs */
-  border: 1px solid var(--colorWhite);/* In light mode it is more clear the difference of the border*/
+  border: 1px solid var(--color-white);/* In light mode it is more clear the difference of the border*/
   font-family: inherit; 
   /* The writen text will be in the same font as the rest of the page */
   font-size: 1rem;/* Size for the writen text when the user inputs something in the form */
   /* No need to set width: 100% here because the container uses display: flex, and the inputs automatically expand to the available width. */
 }
 
-.contactForm .btnSubmit {
+.contact-form .btn-submit {
   padding: 0.75rem;
   border: none;
   border-radius: 10px;
@@ -237,25 +261,33 @@ svg {
   font-size: 1.5rem;
 }
 
-.contactForm button:hover,
-.homeResumeBtnArea .btnResume:hover {
-  background: linear-gradient(90deg, var(--color2), var(--color1));
+.contact-form button:hover,
+.home-resume-btn-container .btn-resume:hover {
+  background: linear-gradient(90deg, var(--color-2), var(--color-1));
 }
 
-.contactForm input:focus,
-.contactForm textarea:focus {
-  border: 1px solid var(--color1); /* Border mantains same thickness and only chages the color */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid var(--color-1); /* Border mantains same thickness and only chages the color */
   outline: none; /* Remove the default browser outline to avoid the focus size increase */
 }
 
-/* FOOTER */
+/* =================================
+   ============ FOOTER =============
+   ================================= */
+
+footer {
+  height: 9vh;
+}
 
 
-
-
+/* =================================
+   ========= MEDIA QUERIES =========
+   ================================= */
+   
 /* From 768px and up: show full menu and hide hamburger button */
 @media (min-width: 768px) {
-  .myPhotoHome {
+  .home-photo {
   width: 400px;
   }
 
@@ -265,28 +297,32 @@ svg {
     gap: 2rem;
   }
 
-  .hamburguer-button {
+  .hamburger-button {
     display: none;
+  }
+
+  nav {
+    display: flex;
   }
 
 /* From 768px and up: different layour for home section */
 
-  .homeMessageArea {
+  .home-message-container {
   grid-column: 1 / 3;
   grid-row: 1 / 2;
   }
 
-  .homeMyPhotoArea {
+  .home-photo-container {
   grid-column: 3 / 5;
   grid-row: 1 / 4;
   }
 
-  .homeResumeBtnArea {
+  .home-resume-btn-container {
   grid-column: 1 / 3;
   grid-row: 2 / 3;
   }
 
-  .homeContactIconsArea {
+  .home-icons-container {
   flex-direction: row;
   grid-column: 1 / 3;
   grid-row: 3 / 4;
