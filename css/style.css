@@ -35,6 +35,7 @@ body {
 /* All links in white color, unless is specified */
 a {
   color: var(--color-white);
+  text-decoration: none;
 }
 
 /* Basic size for svg */
@@ -66,7 +67,9 @@ ul {
 /* =================================
    ============ HEADER =============
    ================================= */
+
 header {
+  height: 9vh;
   background-color: var(--color-black);
   padding: 0 20px;
   display: flex;
@@ -75,12 +78,7 @@ header {
   font-weight: 600;
 }
 
-nav ul li a:hover {
-  border-bottom: 2px solid var(--color-1);   /* Underline color on hover */
-}
-
 .site-name-link {
-  text-decoration: none;
   font-weight: 800;
   font-size: 1.8rem;
 }
@@ -96,17 +94,39 @@ nav ul li a:hover {
   fill: var(--color-white); 
 }
 
+/* =================================
+   ============ MENU =============
+   ================================= */
+
+nav ul li a:hover {
+  border-bottom: 2px solid var(--color-1);   /* Underline color on hover */
+}
+
 /* Hide by default in mobile first */
 nav {
   display: none;
 }
 
-nav ul li a {
-  text-decoration: none;
+header {
+  position: fixed; /* Keeps the header fixed on the screen even when scrolling */
+  top: 0;  /* Positions the header at the very top of the viewport */
+  left: 0;  /* Aligns the header to the very left edge of the viewport */
+  width: 100%; /* Ensures the header stretches across the full viewport width, because positioned elements don’t automatically take full width */
+  z-index: 2; /* Make sure it stays on top of other elements in this casa in front of toogle menu */
 }
 
-header {
-  height: 9vh;
+/* This class (mobile-menu) is toggled through JS when clicking on the hamburger button: */
+.mobile-menu {
+  display: flex;
+  position: absolute; /* Positions the element relative to its nearest positioned ancestor (in this case the header) */
+  top: 100%; /* Moves the element down exactly the height of the header, placing it just below */
+  left: 0; /* Aligns the element to the left edge of the header */
+  width: 100%;/* Ensures the header stretches across the full viewport width, because positioned elements don’t automatically take full width */
+  background-color: var(--color-black);
+  z-index: 1;
+  height: calc(100vh - 9vh); /* Because the header is 9vh */
+  padding: 40px;
+  font-size: 2.2rem;
 }
 
 /* =================================
@@ -114,6 +134,7 @@ header {
    ================================= */
 
 #home {
+  margin-top: 9vh; /* Pushes the entire block down so it doesn’t appear behind the fixed header */
   padding: 20px 20px 0 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
