@@ -7,7 +7,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
 }
 
 html {
@@ -45,6 +45,10 @@ svg {
 
 ul {
   list-style: none;
+}
+
+.sections-titles {
+  font-size: 1.6rem;
 }
 
 /* Gradient for text */
@@ -135,15 +139,16 @@ header {
 
 #home {
   margin-top: 9vh; /* Pushes the entire block down so it doesn’t appear behind the fixed header */
-  padding: 20px 20px 0 20px;
+  height: 91vh; /* Section with reserved space for header (91vh) */
+  padding: 20px 20px 0 20px; /* Adds breathing room inside */
+  scroll-margin-top: 9vh; 
+  /* Fixes anchor link scroll position to each section so that the top of each section is not hidden behind the fixed header (which is 9vh tall) */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  height: 91vh; /* Section with reserved space for header (91vh) */
-  scroll-margin-top: 9vh; /* SCROLL FIX FOR #home ONLY */
 }
 
 .home-message {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 600;
 } 
 
@@ -157,8 +162,10 @@ header {
   cursor: pointer;
 }
 
+/* This image uses an aspect ratio of 3:4 */
 .home-photo {
-  width: 220px;
+  width: 160px;
+  height: 213px;
 }
 
 /* Grid layout: */
@@ -199,7 +206,22 @@ header {
 
 
 #about {
-  height: 100vh;
+  height: 91vh;
+  scroll-margin-top: 9vh; /* Fixes anchor link scroll position to each section so that the top of each section is not hidden behind the fixed header (which is 9vh tall) */
+}
+
+/* This image uses an aspect ratio of 1:1 */
+.about-photo {
+  width: 120px;
+  height: 120px;
+}
+
+.about-message p {
+  font-size: 1.1rem;
+}
+
+.about-message-title {
+  font-size: 1.3rem;
 }
 
 /* =================================
@@ -208,7 +230,8 @@ header {
 
 
 #projects {
-  height: 100vh;
+  height: 91vh;
+  scroll-margin-top: 9vh; /* Fixes anchor link scroll position to each section so that the top of each section is not hidden behind the fixed header (which is 9vh tall) */
 }
 
 .projects-simulation {
@@ -218,13 +241,17 @@ header {
   margin: 10px;
 }
 
+.projects-container {
+  display: flex;
+}
+
 /* =================================
    ============ SKILLS ===========
    ================================= */
 
 #skills {
-  height: 100vh;
-
+  height: 91vh;
+  scroll-margin-top: 9vh; /* Fixes anchor link scroll position to each section so that the top of each section is not hidden behind the fixed header (which is 9vh tall) */
 }
 
 .skills-icons {
@@ -236,7 +263,8 @@ header {
    ================================= */
 
 #contact {
-  height: 91vh; /* Section with reserved space for header (91vh) */
+  height: 82vh; /* Section with reserved space for header (91vh) */
+  scroll-margin-top: 9vh; /* Fixes anchor link scroll position to each section so that the top of each section is not hidden behind the fixed header (which is 9vh tall) */
 }
 
 /* FORM */
@@ -291,6 +319,10 @@ header {
 .contact-form textarea:focus {
   border: 1px solid var(--color-1); /* Border mantains same thickness and only chages the color */
   outline: none; /* Remove the default browser outline to avoid the focus size increase */
+}
+
+.contact-icons-container {
+  display: flex;
 }
 
 /* =================================
