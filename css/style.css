@@ -75,7 +75,7 @@ ul {
 header {
   height: 9vh;
   background-color: var(--color-black);
-  padding: 0 20px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -140,6 +140,7 @@ header {
 #home {
   margin-top: 9vh; /* Pushes the entire block down so it doesn’t appear behind the fixed header */
   min-height: 91vh; /* Section with reserved space for header (91vh) */
+  /*Use min-height instead of height on section containers (e.g., Home, About...) to prevent content clipping and improve section flexibility. */
   padding: 20px 20px 0 20px; /* Adds breathing room inside */
   scroll-margin-top: 9vh; 
   /* Fixes anchor link scroll position to each section so that the top of each section is not hidden behind the fixed header (which is 9vh tall) */
@@ -340,6 +341,10 @@ footer {
    
 /* From 768px and up: show full menu and hide hamburger button */
 @media (min-width: 768px) {
+  header {
+    padding: 40px;
+  }
+
   .home-photo {
   width: 400px;
   }
